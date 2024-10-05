@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Intro from "./pages/Intro";
 
 function App() {
+  const [firstTextGone, setFirstTextGone] = useState(false);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+  // INTRO VIDEO
+  const [isIntroEnded, setIsIntroEnded] = useState(false);
+  const [fadeIn, setFadeIn] = useState(false);
+
+  const handleVideoEnd = () => {
+    setFadeIn(true);
+    setTimeout(() => {
+      setIsIntroEnded(true);
+    }, 1000);
+  };
+
+  useEffect(() => {
+    const handleResize = () => setWindowHeight(window.innerHeight);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ height: "100vh", position: "relative" }}>
+      <Intro />
     </div>
   );
 }

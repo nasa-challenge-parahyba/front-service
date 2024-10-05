@@ -1,0 +1,7 @@
+.disappearing-text {
+    transition: opacity 1s ease-out;
+}
+
+.hidden {
+    opacity: 0;
+}
