@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const PositionedBox = ({
     children,
@@ -7,8 +7,24 @@ const PositionedBox = ({
     color = 'white',
     fontSize = '28px',
     padding = '10px 50px',
-    borderRadius = '15px'
+    borderRadius = '15px',
+    delay = 300,
+    direction = 'left',
+    finalPosition = '0'
 }) => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setIsVisible(true);
+        }, delay);
+
+        return () => clearTimeout(timeout);
+    }, [delay]);
+
+    const initialTranslate = direction === 'left' ? '-100%' : '100%';
+    const translateX = isVisible ? finalPosition : initialTranslate;
+
     const style = {
         position: 'absolute',
         backgroundColor: backgroundColor,
@@ -19,6 +35,9 @@ const PositionedBox = ({
         width: '400px',
         wordWrap: 'break-word',
         fontSize: fontSize,
+        transform: `translateX(${translateX})`,
+        opacity: isVisible ? 1 : 0,
+        transition: 'transform 1s ease-in-out, opacity 1s ease-in-out',
     };
 
     switch (position) {
@@ -41,7 +60,7 @@ const PositionedBox = ({
         case 'center':
             style.top = '50%';
             style.left = '50%';
-            style.transform = 'translate(-50%, -50%)';
+            style.transform = `${isVisible ? 'translate(-50%, -50%)' : `translate(${initialTranslate}, -50%)`}`;
             break;
         default:
             break;

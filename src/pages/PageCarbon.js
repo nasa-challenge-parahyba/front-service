@@ -6,6 +6,7 @@ import '../styles/Carbon.css';
 import PositionedBox from '../components/PositionedBox';
 import Impact from './Impact';
 import CO2FossilFuel from '../components/Maps/CO2FossilFuel'; // Importa o novo componente
+import SlideIn from '../components/SlideIn';
 
 import img1 from '../assets/images/carbon/introduçao.jpg';
 import img2 from '../assets/images/carbon/carvao.jpg';
@@ -55,9 +56,7 @@ export default function PageCarbon({ CO2, setCO2, CH4, setCH4 }) {
         <img src={img1} alt="Carbon Image" className="full-section-image" />
         <div className="text-carbon">
           <PositionedBox position={"top-left"}>
-            <h1>Great choice!</h1>
-          </PositionedBox>
-          <PositionedBox position={"bottom-right"}>
+            <h1>CO2,</h1>
             <p>Let's dive into the world of carbon dioxide (CO₂), the most significant driver of the greenhouse effect</p>
           </PositionedBox>
         </div>
@@ -177,19 +176,29 @@ export default function PageCarbon({ CO2, setCO2, CH4, setCH4 }) {
 
       <div ref={sectionRefs[11]} className="section section12">
         <Impact>
-          <h2 className="impact-title">Global Temperature Increase</h2>
-          <p className="impact-text">The rise in average global temperatures causes an imbalance in climate systems, impacting the health of the planet.</p>
-          <h2 className="impact-title">Impact on Weather Patterns</h2>
-          <p className="impact-text">Changes in weather patterns can result in extreme weather events, affecting food production and human settlements.</p>
-          <h2 className="impact-title">Rising Sea Levels</h2>
-          <p className="impact-text">Melting ice caps and glaciers contribute to rising sea levels, threatening coastal communities and ecosystems.</p>
+          <>
+            <h2 className="impact-title">Global Temperature Increase:</h2>
+            <p className="impact-text">The rise in average global temperatures causes an imbalance in climate systems, impacting the health of the planet.</p>
+          </>
+          <>
+            <h2 className="impact-title">Glacier Melting and Sea Level Rise:</h2>
+            <p className="impact-text">Global warming leads to the melting of polar ice caps and glaciers, resulting in sea level rise, which threatens coastal communities.</p>
+          </>
+          <>
+            <h2 className="impact-title">Social Inequality:</h2>
+            <p className="impact-text">The impacts of climate change disproportionately affect vulnerable populations, exacerbating poverty and food insecurity in disadvantaged communities.</p>
+          </>
+          <>
+            <h2 className="impact-title">Extreme Weather Events:</h2>
+            <p className="impact-text">The frequency and intensity of extreme weather events, such as hurricanes, droughts, and floods, increase, causing damage to ecosystems and infrastructure.</p>
+          </>
         </Impact>
       </div>
 
       <div ref={sectionRefs[12]} className="section section13">
         <div className="text-carbon">
           <PositionedBox position={"center"}>
-            <h1>You finished learning about CO2!</h1>
+            <h1>Congratulations! You finished learning about CO2!</h1>
             <button onClick={() => {
               navigate('/selection');
             }}>CONTINUE</button>

@@ -1,0 +1,21 @@
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    /* Duração da animação de entrada aumentada para 2s */
+    background-color: #1a1a1a;
+    flex-direction: column;
+}
+
+.logo-container.fade-in {
+    opacity: 1;
+}
+
+.logo1 {
+    width: 400px;
+    /* Aumentado para 400px */
+    height: auto;
+}

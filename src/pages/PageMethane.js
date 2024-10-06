@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 import '../styles/Carbon.css'; // Certifique-se de que o CSS tenha estilos para ocupar a tela inteira
 
 import PositionedBox from '../components/PositionedBox';
-import Impact from './Impact';
+import Impact2 from './Impact2';
 import GrayFilter from '../components/GrayFilter';
 
 import img1 from '../assets/images/methane/ImgIntroduçao.jpg';
@@ -171,9 +171,9 @@ function PageMethane({ CO2, setCO2, CH4, setCH4 }) {
             </div> */}
 
             <div ref={sectionRefs[9]} className="section section10">
-                <Impact>
+                <Impact2>
                     <>
-                        <h2 className="impact-title">Accelerated Warming:</h2>
+                        <h2 className="impact2-title">Accelerated Warming:</h2>
                         <p className="impact-text">Although methane has a shorter lifespan in the atmosphere compared to CO₂, it significantly contributes to the greenhouse effect due to its high heat-trapping capacity.</p>
                     </>
                     <>
@@ -182,13 +182,13 @@ function PageMethane({ CO2, setCO2, CH4, setCH4 }) {
                     </>
                     <>
                         <h2 className="impact-title">Changes in Climate Patterns:</h2>
-                        <p className="impact-text"> Methane emissions intensify global warming, which can alter regional and global climate patterns, leading to changes in precipitation regimes and increased frequency of extreme weather events.</p>
+                        <p className="impact-text"> Although methane has a shorter atmospheric lifespan compared to CO₂, it significantly contributes to the greenhouse effect due to its high heat-retention capacity.</p>
                     </>
                     <>
                         <h2 className="impact-title">Air Pollution:</h2>
                         <p className="impact-text">When methane reacts with other compounds in the atmosphere, it can form tropospheric ozone, a harmful pollutant that affects air quality and human health.</p>
                     </>
-                </Impact>
+                </Impact2>
             </div>
 
             <div ref={sectionRefs[12]} className="section section13">
