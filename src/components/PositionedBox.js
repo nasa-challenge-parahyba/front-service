@@ -1,23 +1,30 @@
 import React from 'react';
 
-const PositionedBox = ({ children, position }) => {
+const PositionedBox = ({
+    children,
+    position,
+    backgroundColor = 'rgba(0, 0, 0, 0.5)',
+    color = 'white',
+    fontSize = '28px',
+    padding = '10px 50px',
+    borderRadius = '15px'
+}) => {
     const style = {
         position: 'absolute',
-        backgroundColor: 'white',
-        color: 'black',
-        fontFamily: 'Arial, sans-serif',
-        border: '1px solid #ccc',
-        padding: '20px',
-        borderRadius: '15px',
-        width: '500px',
+        backgroundColor: backgroundColor,
+        color: color,
+        fontFamily: 'Roboto',
+        padding: padding,
+        borderRadius: borderRadius,
+        width: '400px',
         wordWrap: 'break-word',
-        fontSize: '24px',
+        fontSize: fontSize,
     };
 
     switch (position) {
         case 'top-left':
             style.top = '50px';
-            style.left = '50px';
+            style.left = '100px';
             break;
         case 'top-right':
             style.top = '50px';
@@ -28,7 +35,7 @@ const PositionedBox = ({ children, position }) => {
             style.left = '50px';
             break;
         case 'bottom-right':
-            style.bottom = '50px';
+            style.bottom = '100px';
             style.right = '50px';
             break;
         case 'center':

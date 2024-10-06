@@ -1,0 +1,114 @@
+.impact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.quadrant {
+    padding: 60px 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.quadrant-1 {
+    background-color: rgb(255, 166, 0);
+
+}
+
+.quadrant-2 {
+    background-color: rgb(30, 143, 255);
+}
+
+.quadrant-3 {
+    background-color: rgb(60, 179, 114);
+}
+
+.quadrant-4 {
+    background-color: rgb(255, 55, 0);
+}
+
+.quadrant-1:hover {
+    background-color: rgba(220, 140, 0, 0.9);
+}
+
+.quadrant-2:hover {
+    background-color: rgba(25, 120, 220, 0.9);
+}
+
+.quadrant-3:hover {
+    background-color: rgba(50, 150, 100, 0.9);
+}
+
+.quadrant-4:hover {
+    background-color: rgba(220, 50, 0, 0.9);
+}
+
+.quadrant:nth-child(1),
+.quadrant:nth-child(2) {
+    border-bottom: 1px solid #aaa;
+}
+
+.quadrant:nth-child(1),
+.quadrant:nth-child(3) {
+    border-right: 1px solid #aaa;
+}
+
+.impact-title {
+    margin: 0 0 30px 0px;
+    font-size: 2.8em;
+    color: white;
+}
+
+.impact-text {
+    margin: 10px 0 0;
+    font-size: 1.5em;
+    color: white;
+    text-align: left;
+}
+
+/* Estilo das imagens redondas nas bordas internas */
+.round-image {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    padding: 0px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Imagem no meio da borda entre quadrante 1 e 2 (parte superior) */
+.image-top {
+    top: 24%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Imagem no meio da borda entre quadrante 3 e 4 (parte inferior) */
+.image-bottom {
+    bottom: 24%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+/* Imagem no meio da borda entre quadrante 1 e 3 (parte esquerda) */
+.image-left {
+    top: 47%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+}
+
+/* Imagem no meio da borda entre quadrante 2 e 4 (parte direita) */
+.image-right {
+    top: 50%;
+    right: 25%;
+    transform: translate(50%, -50%);
+}
