@@ -72,7 +72,8 @@ const CH4FossilEmission = () => {
                         zIndex: 10
                     }}>
                         <h4>Fossil Fuel CO₂ Emissions Map</h4>
-                        <p style={{ color: 'black' }}>This map uses data from the ODIAC 2023 inventory, which estimates global fossil fuel CO₂ emissions at a high resolution (1 km²). The dataset combines energy consumption information with satellite observations to display emissions of 2020. Urban areas, as the primary sources of emissions, are highlighted.</p>
+                        <p style={{ color: 'black' }}>Fossil emissions arise from the decomposition of ancient carbon materials like natural gas and coal bed methane, as well as minor contributions from geological seeps. These emissions are analyzed through atmospheric measurements of methane isotopes, which help identify their sources, including fossil fuel exploration. Utilizing data from NOAA and research collaboration with the University of Colorado Boulder, scientists from NASA and NOAA modeled fossil methane emissions based on information from 2016.
+                        </p>
                     </div>
                 )
             }

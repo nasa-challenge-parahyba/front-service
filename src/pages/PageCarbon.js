@@ -7,6 +7,7 @@ import PositionedBox from '../components/PositionedBox';
 import Impact from './Impact';
 import CO2FossilFuel from '../components/Maps/CO2FossilFuel'; // Importa o novo componente
 import SlideIn from '../components/SlideIn';
+import CH4FossilEmission from '../components/Maps/CH4FossilEmission';
 
 import img1 from '../assets/images/carbon/introduçao.jpg';
 import img2 from '../assets/images/carbon/carvao.jpg';
@@ -111,7 +112,7 @@ export default function PageCarbon({ CO2, setCO2, CH4, setCH4 }) {
       </div>
 
       <div ref={sectionRefs[5]} className="section section6">
-        <CO2FossilFuel />
+        <CH4FossilEmission />
       </div>
 
       <div ref={sectionRefs[6]} className="section section7">
